@@ -5,7 +5,8 @@ const initialState = {
     userName: "",
     email: "",
     password: "",
-    loginInformation:{}
+    loginInformation: {},
+    errorInformation: {}
 }
 
 
@@ -21,6 +22,31 @@ export default (state = initialState, action) => {
             return {
                 ...state,
                 [action.data[1]]: action.data[0]
+            };
+        case ActionTypes.SIGNIN:
+            return {
+                ...state,
+                loginInformation: action.data
+            };
+        case ActionTypes.SIGNINSUCCESS:
+            return {
+                ...state,
+                loginInformation: action.data
+            };
+        case ActionTypes.SIGNUPSUCCESS:
+            return {
+                ...state,
+                loginInformation: action.data
+            };
+        case ActionTypes.SIGNUPERROR:
+            return {
+                ...state,
+                errorInformation: action.data
+            };
+        case ActionTypes.SIGNINERROR:
+            return {
+                ...state,
+                errorInformation: action.data
             };
         default:
             return state;

@@ -1,3 +1,10 @@
 export const SIGNUP = "SIGNUP";
+export const SIGNUPSUCCESS = "SIGNUPSUCCESS";
+export const SIGNUPERROR = "SIGNUPERROR";
+
+export const SIGNIN = "SIGNIN";
+export const SIGNINSUCCESS = "SIGNINSUCCESS";
+export const SIGNINERROR = "SIGNINERROR";
+
 export const TEXTVALUECHANGED = "TEXTVALUECHANGED";
 
